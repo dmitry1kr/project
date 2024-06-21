@@ -1,0 +1,14 @@
+.main {
+    width: 992px;
+    height: 450px;
+    margin-top: 20px;
+}
+
+.image_slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+

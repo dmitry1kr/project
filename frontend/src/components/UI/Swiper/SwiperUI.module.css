@@ -1,0 +1,16 @@
+.main {
+    width: 100%; /* Изменено на проценты или другие относительные единицы */
+    max-width: 992px; /* Добавлено ограничение на максимальную ширину */
+    height: 50px;
+    display: flex;
+}
+
+.slide_block {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 23px;
+    /* background: #702dff; */
+}

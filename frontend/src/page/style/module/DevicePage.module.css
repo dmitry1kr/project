@@ -1,0 +1,105 @@
+.main {
+    width: 992px;
+    margin-top: 60px;
+}
+
+.section_1 {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    height: 425px;
+    justify-content: space-between;
+}
+
+.img_device {
+    width: 60%;
+    max-height: 100%;
+    color: #c6c6c6;
+}
+
+.brand {
+    position: relative;
+    top: 15px;
+    right: -245px;
+}
+
+.brand_img {
+    width: 40px;
+    height: 40px;
+}
+
+.image_ {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+
+.card_device {
+    width: 32%;
+    height: 100%;
+    background-color: rgb(251 250 250);
+    box-shadow: 10px 5px 5px rgba(111, 45, 255, 0.26);
+    border-radius: 15px;
+}
+
+.device {
+    margin: 0 30px 30px 30px;
+}
+
+.device_name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+    color: #000;
+}
+
+.feedbacks {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #c6c6c6;
+}
+
+.line{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 23px;
+}
+.text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #c6c6c6;
+}
+
+.text_left {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+    color: #000;
+}
+
+.full_price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+    color: #702DFF;
+}
+
+.section_2 {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    min-height: 271px;
+    justify-content: space-between;
+    margin-top: 20px;
+    /* background-color: #c6c6c6; */
+    margin-bottom: 20px;
+}
+
+.device_info {
+    width: 646px;
+}
+

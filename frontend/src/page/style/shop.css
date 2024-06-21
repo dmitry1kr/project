@@ -1,0 +1,91 @@
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:wght@500;600;700;800;900&display=swap');
+
+
+.animate_block {
+    position: relative;
+    width: 99.1vw;
+    height: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* чтобы обрезать фоновое изображение */
+}
+
+.animate_block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://mebel-complect.ru/wp-content/uploads/b/c/3/bc36bb373ec2293dc63ebca42c6a9845.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+    animation: slidein 30s infinite alternate; /* возвращаем вашу анимацию */
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.center h1{
+  text-align:center;
+  color:white;
+  font-family: 'Source Code Pro', monospace;
+  text-transform:uppercase;
+}
+
+.stroke-text{
+    -webkit-text-stroke:3px black;
+    -webkit-text-fill-color:transparent;
+    font-size: 150px;
+  }
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+.col-md-3 {
+    flex: 0 0 auto;
+    width: 20.8%;
+}}
+
+.p-datascroller-list ol, ul{
+  padding-left: 0rem !important; 
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0rem;
+  left: 0;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  color: #fff;
+  text-align: left;
+  padding: 100px;
+}

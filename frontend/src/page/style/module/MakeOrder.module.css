@@ -1,0 +1,144 @@
+.card {
+    background-color: rgb(251 250 250);
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px rgba(111, 45, 255, 0.26);
+}
+
+.text_order_main {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 179%;
+    color: #333;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 150%;
+    color: #000;
+}
+.text_slave {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 150%;
+    color: #000;
+}
+
+.text_number_order {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 150%;
+    color: #702DFF;
+}
+.image {
+    width: 94.9%;
+    height: 82px;
+    border-radius: 15px;
+}
+
+.device_name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 117%;
+    color: white;
+}
+
+.price_block {
+    width: 20%;
+}
+
+.price_device {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: white;
+}
+
+
+.device_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.device_card_next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(150deg, #2f0035, #702DFF);
+    box-shadow: 5px 5px 5px rgba(111, 45, 255, 0.26);
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+}
+
+.list_group_item_custom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: rgb(251 250 250) !important; 
+    
+    border: none;
+    border-radius: 0 !important;
+    color: #702DFF !important;
+    
+    border-radius: 15px 0 0 15px !important;
+    padding: 20px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 74%;
+    
+}
+.list_group_item_custom:last-child {
+    border-radius: 0 15px 15px 0 !important;
+    
+    
+}
+
+.list_group_item_custom.active {
+    width: 100%;
+    background: linear-gradient(150deg, #2f0035, #702DFF) !important;
+    color: white !important;
+    border-radius: 15px 0 0 15px !important;
+   
+    
+}
+
+.list_group_item_custom.active:last-child {
+    border-radius: 0 15px 15px 0 !important;
+    margin: 0 !important;
+}
+
+.text_order {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+}
+
+.text_order_color {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+    color: #702DFF;
+}
+
+.final_text{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 150%;
+    text-decoration: underline;
+}
+.final_price {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 125%;
+}
+

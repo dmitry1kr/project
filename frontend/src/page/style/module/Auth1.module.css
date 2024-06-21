@@ -1,0 +1,110 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background: rgba(0,0,0, 0.5);
+    z-index: 3;
+}
+
+.modal_content {
+    padding: 25px;
+    background: white;
+    min-width: 250px;
+    max-width: 400px;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeButton {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    text-align: center;
+    border-radius: 100%;
+
+    position: relative;
+    top: -40px;
+    left: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp1 {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 125%;
+    text-align: center;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.mail {
+    border: 0.87px solid #ebebeb !important;
+    border-radius: 6px;
+    width: 269px;
+    height: 50px; 
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.password {
+    border: 0.87px solid #ebebeb !important;
+    border-radius: 6px;
+    width: 269px;
+    height: 50px; 
+    margin-bottom: 15px;
+}
+
+.sp2 {
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #702dff;
+    margin-bottom: 15px;
+}
+
+.button {
+    border-radius: 6px;
+    width: 155px;
+    height: 45px;
+    color: #ffffff;
+    background-color:#702dff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    text-align: center;
+    
+}
+
+.sp3 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: #000;
+}
+
+.link {
+    font-weight: 500;
+    color: #702dff
+}

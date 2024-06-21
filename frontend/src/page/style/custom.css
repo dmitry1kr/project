@@ -1,0 +1,7 @@
+.modal-content {
+    width: 358px !important;
+    height: 420px !important;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}

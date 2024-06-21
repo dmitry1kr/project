@@ -1,0 +1,53 @@
+.nav {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    width: 99vw;
+}
+.main {
+    width: 992px;
+    display: flex;
+    padding: 0;
+    
+}
+
+.img_logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 60px;
+}
+
+.person_img {
+    background-image: url('../../../assets/img/person.svg');
+}
+
+.row_navbar {
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.col_link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #333;
+    /* margin-right: 200px; */
+}
+
+.menu_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu_right_telephone {
+    margin-right: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 117%;
+    color: #000;
+}
+
+.links_shop{
+    display: flex;
+    column-gap: 60px;
+}

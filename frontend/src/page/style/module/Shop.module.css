@@ -1,0 +1,22 @@
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: rgb(251 250 250);
+    box-shadow: 10px 5px 5px rgba(111, 45, 255, 0.26);
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.text_cat {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}

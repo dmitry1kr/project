@@ -1,0 +1,98 @@
+.footer {
+    height: 301px;
+    background: linear-gradient(150deg, #2f0035, #702DFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 992px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.phone_shops {
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone_country {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone_shop {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone_text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 262%;
+    color: #ffffff;
+}
+
+.phone {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 208%;
+    color: #ffffff;
+}
+
+.graph_work {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 210%;
+    color: #ffffff;
+}
+
+.mail {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 175%;
+    color: #ffffff;
+}
+
+.help {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #ffffff;
+}
+
+.mini_foter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mini_foter span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 262%;
+    color: #ffffff;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+.social span{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 210%;
+    letter-spacing: 0.2em;
+    font-variant: all-small-caps;
+    color: #ffffff;
+}
+
+.auth {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 210%;
+    color: #ffffff;
+}

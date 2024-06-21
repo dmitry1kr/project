@@ -1,0 +1,27 @@
+.line_params {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.title_params {
+    font-weight: 500;
+    font-size: 18px;
+    color: #828282;
+    border-bottom: 1px dotted #ddd;
+    width: 60%;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+}
+
+.descr_params {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}

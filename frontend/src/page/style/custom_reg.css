@@ -1,0 +1,48 @@
+.modal-content {
+    width: 384px !important;
+    height: 533px !important;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    justify-content: center;
+}
+
+.check-block .line {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+
+.check-block .line input {
+    position: relative;
+    display: none;
+  }
+.check-block .line input:checked ~ label::before {
+    background: #702dff;
+    border: 2px solid #fcfcfc;
+  }
+.check-block .line input ~ label {
+    position: relative;
+    margin-left: 30px;
+    text-align: left;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #c6c6c6;
+  }
+.check-block .line input ~ label a {
+    color: #702dff;
+    
+  }
+.check-block .line input ~ label::before {
+    content: "";
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #fcfcfc;
+    border: 2px solid #ebebeb;
+    position: absolute;
+    top: 0;
+    left: -30px;
+  }
