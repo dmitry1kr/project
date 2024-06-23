@@ -113,7 +113,7 @@ const NavBar = observer(() => {
                             ?
                             <div>
                                 {/* <Nav.Link href="#login-user" style={{marginRight: 5}}><Image src={user_img} style={{width: 40, height: 40}}/></Nav.Link> */}
-                                <NavDropdown title={<Image src={process.env.REACT_APP_API_URL + '/media/' + user.userInfo.image} style={{width: 40, height: 40}}/>} id="navbarScrollingDropdown">
+                                <NavDropdown title={<Image src={process.env.REACT_APP_API_URL + 'media/' + user.userInfo.image} style={{width: 40, height: 40}}/>} id="navbarScrollingDropdown">
                                     <NavDropdown.Item><span style={{cursor: 'pointer'}} onClick={() => navigate(USER_PROFILE + '/id_' + user.userInfo.user_id + '_' + user.userInfo.username)}>Профиль</span></NavDropdown.Item>
                                     <NavDropdown.Item onClick={() => logOut()}>Выйти</NavDropdown.Item>
                                 </NavDropdown>

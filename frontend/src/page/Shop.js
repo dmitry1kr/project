@@ -42,12 +42,6 @@ const Shop = observer(() => {
     return (
         <Container className={style.main_container}>
             
-            {/* <div className='animate_block'> */}
-                {/* <div className='center d-flex'> */}
-                    {/* <Image src={logo} alt="Logo"/>  */}
-                    {/* <span className='stroke-text'>Умный дом для вас</span> */}
-                {/* </div> */}
-            {/* </div> */}
             
                 <div className='center d-flex' style={{marginTop: 10, width: '99vw'}}>
                     <Image src={smart} alt="Logo" style={{width: '100%'}}/> 
@@ -76,7 +70,7 @@ const Shop = observer(() => {
                                         <div className={style.card} onClick={() => handleSelect(data.id)}>
                                             <div style={{padding:10}}>
                                                 <div className='d-flex'>
-                                                    <Image src={process.env.REACT_APP_API_URL + '/media/' + data.image.replace(/.*\/type/, '/type')} style={{width: '100%', borderRadius: 15}}></Image>
+                                                    <Image src={process.env.REACT_APP_API_URL + 'media' + data.image.replace(/.*\/type/, '/type')} style={{width: '100%', borderRadius: 15}}></Image>
                                                 </div>
                                                 <div className='d-flex justify-content-center'>
                                                     <span style={{fontSize: 20, fontWeight: 600}}>{data.name}</span>
