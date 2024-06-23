@@ -15,15 +15,12 @@ const App = observer(() => {
 
 
     const {user, cart} = useContext(Context)
-    console.log(cart, 'проверка при перезагрузке')
-
 
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         check()
             .then(data => {
-                console.log(data, 'data');
                 user.setUser(data);
                 user.setIsAuth(true);
                 user.setUserInfo(jwtDecode(localStorage.getItem('token')))
@@ -31,7 +28,6 @@ const App = observer(() => {
                 
             })
             .catch(error => {
-                console.error("Произошла ошибка при проверке:", error);
                 localStorage.removeItem('token')
             })
             .finally(() => setLoading(false)); 
@@ -39,7 +35,6 @@ const App = observer(() => {
             if (cart.cartItems.length === 0) {
                 getBasketUser(user.userInfo.user_id)
                     .then(data => {
-                        console.log(data);
                         data.map(devices => {
                             cart.addToCart(devices.device);
                         });

@@ -1,15 +1,10 @@
-import React, { useRef, useEffect, useContext, useState } from 'react'
-import { Container, Image, Row, Col, Spinner, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import React, { useEffect, useContext, useState } from 'react'
+import { Container, Image, Col, Spinner, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import './style/shop.css'
 import style from './style/module/Shop.module.css'
-import logo from './../assets/img/logo.svg'
 import Slider from '../components/UI/Slider/Slider'
-import Carousel from 'react-bootstrap/Carousel';
-import SwiperUI from '../components/UI/Swiper/SwiperUI'
 import { Context } from '../index';
-import { ListGroup } from 'react-bootstrap';
 import {observer} from 'mobx-react-lite'
-import DeviceList from '../components/DeviceList'
 import { fetchDevice, fetchTypes } from '../http/deviceAPI'
 import { useNavigate } from 'react-router-dom'
 import { PRODUCT_ROUT } from '../utils/const'

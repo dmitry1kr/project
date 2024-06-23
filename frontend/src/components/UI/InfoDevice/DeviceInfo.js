@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import style from './DeviceInfo.module.css'
-import { Nav } from 'react-bootstrap'
-import ModalInfo from '../Modal/ModalInfo'
 
 const DeviceInfo = ({info}) => {
 

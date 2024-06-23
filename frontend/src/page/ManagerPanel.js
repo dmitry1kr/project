@@ -1,9 +1,8 @@
 import { observer } from 'mobx-react-lite';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Accordion, Button, Col, Dropdown, Form, Image, Row, Spinner } from 'react-bootstrap';
 import { Calendar } from 'primereact/calendar';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
-import { Context } from '../index';
 import Plot from 'react-plotly.js';
 import { changeDataOrder, changeStatusOrder, getAllOrder, getStatusOrder } from '../http/orderAPI';
 import style from './style/module/ManagerPanel.module.css';
@@ -46,7 +45,6 @@ const ManagerPanel = observer(() => {
             const fetchData = await postType(type)
             showMessage(0, 'success', 'Успешно', 'Категория добавлена');
         } catch (error) {
-            console.log('Ошибка при добавлении статуса', error)
             showMessage(0, 'error', 'Ошибка', 'Ошибка при добавлении категории');
         }
     }
@@ -64,7 +62,6 @@ const ManagerPanel = observer(() => {
             const fetchData = await postBrand(brand, imageBrand)
             showMessage(1, 'success', 'Успешно', 'Бренд добавлен');
         } catch (error) {
-            console.log('Ошибка',error)
             showMessage(1, 'error', 'Ошибка', 'Ошибка при добавлении бренда');
         }
     }
@@ -86,7 +83,6 @@ const ManagerPanel = observer(() => {
             const fetchData = await createDevice(nameDevice, selectBrand, selectType, priceDevice, imageDevice, infoDevice)
             showMessage(2, 'success', 'Успешно', 'Устройство добавлено');
         } catch (error) {
-            console.log('Ошибка',error)
             showMessage(2, 'error', 'Ошибка', 'Ошибка при добавлении устройства');
         }
     }
@@ -174,12 +170,10 @@ const ManagerPanel = observer(() => {
                     setTypeBD(types);
                     setBrandBD(brands);
                     setDevices(devices);
-                    console.log(devices);
                     setLoading(false);
                     setSales(sales)
                 }
             } catch (error) {
-                console.log('Ошибка', error);
                 if (isMounted) {
                     setLoading(false);
                 }
@@ -196,7 +190,6 @@ const ManagerPanel = observer(() => {
 
     const getOneDevice = (name) => {
         if (!devices) {
-            console.log('Devices not loaded yet');
             return null;
         }
         return devices.find(device => device.name_device === name);
@@ -212,13 +205,11 @@ const ManagerPanel = observer(() => {
     const [characteristics, setCharacteristics] = useState([]);
 
     const handleCharacteristicChange = (name, value) => {
-        console.log('asdasdasdasd', name, value);
         const updatedCharacteristics = { ...characteristics }; 
         updatedCharacteristics[name] = { ...updatedCharacteristics[name], value: value };
         setCharacteristics(updatedCharacteristics);
     };
 
-    console.log('charachter', characteristics)
 
     const addCharactersticsDevice = (id, type) => {
         
@@ -252,7 +243,7 @@ const ManagerPanel = observer(() => {
             changeStatusOrder(id, status);
             showMessage(id, 'success', 'Успешно', 'Статус изменён');
         } catch(error) {
-            console.log('Ошибка при изменении статуса', error)
+            
             showMessage(id, 'error', 'Ошибка', 'Статус не был изменён');
         }
         
@@ -264,14 +255,14 @@ const ManagerPanel = observer(() => {
             changeDataOrder(id, moment(date).format("YYYY-MM-DD HH:mm:ss"));
             showMessage(id, 'success', 'Успешно', 'Дата изменена');
         } catch(error) {
-            console.log('Ошибка при изменении статуса', error)
+            
             showMessage(id, 'error', 'Ошибка', 'Дата не была изменёна');
         }
         
     }
 
    
-    console.log(sales)
+    
     return (
         <div className='d-flex flex-column align-items-center' style={{ width: '99vw' }}>
             

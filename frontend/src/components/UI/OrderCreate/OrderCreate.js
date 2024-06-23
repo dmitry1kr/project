@@ -17,7 +17,6 @@ const OrderCreate = () => {
 
     useEffect(() => {
         if (location.state && location.state.data) {
-            console.log(location.state.data, 'asdasdassdaasdasdasdasdsd');
             setData(location.state.data);
             setNumberOrder(location.state.number);
         }

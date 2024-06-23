@@ -1,14 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Button, Form, Image, InputGroup, Spinner, Placeholder } from 'react-bootstrap';
 import style from './style/module/DevicePage.module.css'
-import apple from '../assets/img/apple.svg'
 import Rating from '../components/UI/Rating/Rating';
 import cart_white from '../assets/img/cart_white.svg'
 import { ListGroup } from "react-bootstrap";
 import DeviceInfo from '../components/UI/InfoDevice/DeviceInfo';
 import ParametrsDevice from '../components/UI/ParametrsDevice/ParametrsDevice';
 import FeedbackUser from '../components/UI/FedbackUser/FeedbackUser';
-import Counter from '../components/UI/Counter/Counter';
 import { observer } from 'mobx-react-lite';
 import { Context } from '../index'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -26,7 +24,6 @@ const DevicePage = observer(() => {
 
     const [device, setDevice] = useState({info: []})
     const {id} = useParams()
-    const max_device = 23
 
     const [valueInput, setValueInput] = useState(1);
 
@@ -64,7 +61,6 @@ const DevicePage = observer(() => {
             
         )
     }
-    console.log(device)
 
     
     const handleAddToCart = (user_id, device_id) => {
@@ -75,7 +71,6 @@ const DevicePage = observer(() => {
             })
             .then(updatedBasket => {
                 setBasket(updatedBasket); // Обновляем состояние корзины
-                console.log('Basket updated:', updatedBasket);
             })
             .catch(error => {
                 console.error("Произошла ошибка при добавлении товара в корзину:", error);
@@ -100,7 +95,6 @@ const DevicePage = observer(() => {
             })
             .then(updatedBasket => {
                 setBasket(updatedBasket); // Обновляем состояние корзины
-                console.log('Basket updated:', updatedBasket);
             })
             .catch(error => {
                 console.error("Произошла ошибка при добавлении товара в корзину:", error);
@@ -108,7 +102,6 @@ const DevicePage = observer(() => {
     };
 
     
-    console.log(device)
     return (
         <div className='d-flex justify-content-center'>
             <div className={style.main}>

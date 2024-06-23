@@ -1,4 +1,4 @@
-import { $authHost, $host } from "./index"
+import { $host } from "./index"
 
 export const getBalanceUserWallet = async (id) => {
     const { data } = await $host.get(`/wallet/${id}`)

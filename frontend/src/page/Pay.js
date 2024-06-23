@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import style from './style/module/Pay.module.css'
 import { Button, Image, Spinner } from 'react-bootstrap'
-import { getAllOrder, getNotPayedOrderUser } from '../http/orderAPI';
+import { getNotPayedOrderUser } from '../http/orderAPI';
 import { Context } from '../index'
 import { getBalanceUserWallet, payOrderUser } from '../http/payAPI';
 import ModalPay from '../components/UI/Modal/ModalPay';
@@ -47,7 +47,6 @@ const Pay = () => {
     }, []);
 
     const payedOrder = (user_id, order_id, amount) => {
-        console.log(user_id, order_id, amount);
 
         payOrderUser(user_id, order_id, amount)
             .then(() => {
@@ -69,7 +68,6 @@ const Pay = () => {
         )
     }
 
-    console.log(orders,  'adsasasdasdsadasdasdasdasd')
     return (
         <div className='d-flex flex-column align-items-center' style={{width: '99vw', minHeight: '60vh'}}>
             <div style={{width: 992, rowGap: 30}} className='d-flex flex-column'>

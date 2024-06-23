@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { observer } from 'mobx-react-lite'
 import { Context } from '../../../index'
 import style from './Slider.module.css'
-import { useEffect } from 'react';
+
 
 
 const Slider = observer(() => {

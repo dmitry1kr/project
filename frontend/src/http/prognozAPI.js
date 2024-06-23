@@ -1,4 +1,4 @@
-import { $authHost, $host } from "./index"
+import { $host } from "./index"
 
 export const getPrognoz = async (step, period) => {
     const { data } = await $host.get(`attendance/prognoz/${step}/${period}`)

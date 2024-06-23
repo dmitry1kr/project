@@ -1,10 +1,6 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Image from 'react-bootstrap/Image'
 import style from './Footer.module.css'
-import { Link } from "react-router-dom";
-import { Imgae } from 'react-bootstrap'
 import vk from '../../../assets/img/vk.svg'
 import telegram from '../../../assets/img/telegram.svg'
 import person from '../../../assets/img/person_white.svg'

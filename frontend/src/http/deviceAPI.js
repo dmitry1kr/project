@@ -1,5 +1,5 @@
 import { $authHost, $host } from "./index"
-import { jwtDecode } from 'jwt-decode'
+
 
 export const createType= async (type) => {
     const { data } = await $host.post('/types/', type);
@@ -21,10 +21,6 @@ export const fetchBrand = async () => {
     return data;
 }
 
-// export const createDevice = async (device) => {
-//     const { data } = await $host.post('/devices/', device);
-//     return data;
-// }
 
 export const fetchDevice = async () => {
     const { data } = await $host.get('/devices/');

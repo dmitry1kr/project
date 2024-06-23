@@ -1,13 +1,12 @@
 import { observer } from 'mobx-react-lite'
 import React, { useContext } from 'react'
 import { Context } from '../index'
-import { Col, Row } from 'react-bootstrap'
+
 import DeviceItem from './DeviceItem'
 
 const DeviceList = observer(() => {
 
     const {cart, device, user} = useContext(Context)
-    console.log(cart, 'cartaaaa')
 
     return (
         <div className='d-flex flex-wrap justify-content-between'>

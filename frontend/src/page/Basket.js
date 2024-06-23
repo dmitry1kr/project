@@ -18,7 +18,6 @@ const Basket = observer(() => {
 
 
     useEffect(() => {
-        console.log(user.userInfo.user_id, 'id');
         
             getBasketUser(user.userInfo.user_id)
                 .then(data => {
@@ -31,12 +30,10 @@ const Basket = observer(() => {
                 .catch(error => {
                     console.error("Произошла ошибка при проверке:", error);
                 }).finally(() => setLoading(false)); 
-        // }
+        
         
         getLastNumberOrder()
             .then(data => {
-                console.log(data)
-                
                 setNumber((parseInt(data[0].number_order) + 1).toString().padStart(data[0].number_order.length, '0'))
             })
        
@@ -58,8 +55,6 @@ const Basket = observer(() => {
             });
     };
 
-    console.log(typeof(number), 'number')
-    console.log(cart.cartItems[0], 'cart111');
 
     if (loading) {
         return (

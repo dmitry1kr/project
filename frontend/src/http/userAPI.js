@@ -7,7 +7,6 @@ export const registration = async (email, username, password, password2) => {
 
 export const login = async (email, password) => {
     const { data } = await $host.post('/token/', { email, password });
-    console.log(data.access)
     localStorage.setItem('token', data.access)
     return jwtDecode(data.access);
 }
@@ -37,7 +36,6 @@ export const changeUserPassword = async (old_password, new_password, new_passwor
 }
 
 export const changePersonalUserInfo = async (id, first_name, surname, patronymic, image) => {
-    console.log(id, first_name, surname, patronymic, image);
     try {
         const formData = new FormData();
         formData.append('first_name', first_name);

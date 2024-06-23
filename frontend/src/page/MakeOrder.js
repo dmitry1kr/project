@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
 import style from './style/module/MakeOrder.module.css'
-import { Button, Form, FormControl, Image, ListGroup } from 'react-bootstrap'
+import { Button, Form, Image, ListGroup } from 'react-bootstrap'
 import { observer } from 'mobx-react-lite';
 import OrderInfo from '../components/UI/OrderInfo/OrderInfo';
 import { Context } from '../index'
 
 import moment from 'moment-timezone';
-import { createOrder } from '../http/orderAPI';
 import { useNavigate } from 'react-router-dom';
 import { CREATED_ORDER } from '../utils/const';
 import { getLastNumberOrder } from '../http/basketAPI';
@@ -28,17 +27,14 @@ const MakeOrder = observer(() => {
     useEffect(() => {
         getLastNumberOrder()
             .then(data => {
-                console.log(data, 'data')
-                
                 setNumber((parseInt(data[0].number_order) + 1).toString().padStart(data[0].number_order.length, '0'))
-                console.log(number)
             })
     }, [number])
 
     const visibleItem = (index) => {
         setActiveItem(index)
     }
-    console.log(cart, 'basket')
+    
     
     const countAllPrice = () => {
 
@@ -56,12 +52,9 @@ const MakeOrder = observer(() => {
         
     }
 
-    console.log(countAllPrice(), 'final_price')
-
     const [orderInfo, setOrderInfo] = useState(1)
 
     const handleOrderInfoChange = (info) => {
-        console.log('OrderInfo data:');
         setOrderInfo(info)
         return info
     };
@@ -76,7 +69,7 @@ const MakeOrder = observer(() => {
         }))
     )
 
-    console.log(orderInfo)
+
     const [formOrder, setFormOrder] = useState()
 
     const create = () => {
@@ -93,7 +86,7 @@ const MakeOrder = observer(() => {
     
         }
         setFormOrder(data)
-        console.log(formOrder)
+
         navigate(CREATED_ORDER + `/${number}`, { state: { data: data, number: number } })
     }
 

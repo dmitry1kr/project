@@ -33,7 +33,7 @@ const Delivery = () => {
             
         )
     }
-    console.log(orders)
+    
     return (
         <div className='d-flex flex-column align-items-center' style={{ minHeight: '60vh'}}>
             <div style={{width: 992, rowGap: 30}} className='d-flex flex-column'> 

@@ -66,7 +66,7 @@ const Profile = () => {
 
     const changePassword = async () => {
         if (newPassword === repeatNewPassword) {
-            console.log('Пароли совпадают');
+            
             try {
                 await changeUserPassword(oldPassword, newPassword, repeatNewPassword);
                 showMessage('success', 'Успешно', 'Пароль изменён');
@@ -76,7 +76,6 @@ const Profile = () => {
                 console.log(error, 'Ошибка при смене пароля');
             }
         } else {
-            console.log('Пароли не совпадают');
             showMessage('error', 'Ошибка', 'Пароли не совпадают');
         }
     }
@@ -101,7 +100,7 @@ const Profile = () => {
             showMessage('error', 'Ошибка', 'Произошла ошибка, попробуйте снова или обратитесь в тех.поддержку')
         }
     }
-    console.log(profile)
+    
     return (
         <div className='d-flex justify-content-between flex-column' style={{width: '100%', marginBottom: 30}} >
             <Messages ref={msgs} />

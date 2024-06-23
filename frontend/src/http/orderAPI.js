@@ -1,14 +1,12 @@
-import { $authHost, $host } from "./index"
+import { $host } from "./index"
 
 export const createOrder = async (formOrder) => {
-    console.log(formOrder.type_order, 'пришли данные');
+    
     if (formOrder.type_order === 1) {
         delete formOrder.pickup_order
-        console.log(formOrder)
         const { data } = await $host.post(`/orders/${formOrder.user}/delivery`, formOrder)
     } else {
         delete formOrder.delivery_order
-        console.log(formOrder)
         const { data } = await $host.post(`/orders/${formOrder.user}/pickup`, formOrder)
     }
     
@@ -35,12 +33,10 @@ export const getStatusOrder = async () => {
 }
 
 export const changeStatusOrder = async (id, status) => {
-    console.log(id, status)
     const { data } = await $host.post(`/status/change/${id}/`, {status})
 }
 
 export const changeDataOrder = async (id, date) => {
-    console.log(id, date)
     const { data } = await $host.post(`/status/change/${id}/`, {date})
 }
 

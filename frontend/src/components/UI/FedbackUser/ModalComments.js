@@ -15,7 +15,6 @@ const ModalComments = ({show, onHide, id}) => {
     const [device, setDevice] = useState(id)
     const [value, setValue] = useState('');
     const [rating, setRating] = useState(5)
-    console.log(rating)
 
     const showMessage = (severity, summary, detail) => {
         msgs.current.clear()

@@ -3,7 +3,6 @@ import { YMaps, Map, SearchControl, FullscreenControl, GeolocationControl, Place
 import { Button, Form, FormControl, Image } from 'react-bootstrap'
 import style from './OrderInfo.module.css'
 import { observer } from 'mobx-react-lite';
-import { set } from 'mobx';
 import moment from 'moment-timezone';
 moment.locale('ru');
 moment.tz.setDefault("Europe/Ekaterinburg");

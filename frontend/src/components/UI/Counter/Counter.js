@@ -6,7 +6,6 @@ import { updateQuantityDeviceInBasket } from '../../../http/basketAPI';
 
 const Counter = ({ initialValue, maxDevice, onQuantityChange, idCart }) => {
     const [valueInput, setValueInput] = useState(initialValue);
-    console.log(idCart)
 
     const setValuePlus = () => {
         if (valueInput < maxDevice) {

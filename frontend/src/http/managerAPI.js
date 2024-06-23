@@ -59,8 +59,6 @@ export const createDevice = async (name_device, brand, type, price, image, info)
 }
 
 export const createCharDevice = async (props) => {
-    console.log(props)
-
     
     const response = {
         characteristics: props.reduce((acc, cur) => {
@@ -71,7 +69,7 @@ export const createCharDevice = async (props) => {
 
     
     
-    console.log(response)
+    
     try {
         const { data } = await $authHost.post('/character/device/', props);
         return data; 
@@ -81,7 +79,6 @@ export const createCharDevice = async (props) => {
 }
 
 export const editPriceAndQuantity = async (data) => {
-    console.log(data, 'пришла дата')
     const device= data.id
     const quantity = parseInt(data.status_accounting.quantity)
     const price = parseInt(data.price)

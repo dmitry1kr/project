@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { Modal, Form, Button, Image, Nav } from 'react-bootstrap'
 import style from './ModalPay.module.css'
 import { topUpBalanceUserWallet } from '../../../http/payAPI'
-import ok from '../../../assets/img/ok.svg'
-import close from '../../../assets/img/cancel.svg'
 
 const ModalPay = ({show, onHide, userId}) => {
 
@@ -14,7 +12,7 @@ const ModalPay = ({show, onHide, userId}) => {
             .then(
                 console.log('Пополнился')
             ).catch(
-                console.log('Гавно')
+                console.log('Не удачно')
             )
     }
 

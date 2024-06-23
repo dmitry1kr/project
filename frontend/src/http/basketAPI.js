@@ -1,4 +1,3 @@
-import { jwtDecode } from "jwt-decode"
 import { $host } from "./index"
 
 export const getBasketUser = async (id) => {
@@ -7,7 +6,6 @@ export const getBasketUser = async (id) => {
 }
 
 export const addBasketDeivce = async (basket, device_id) => {
-    console.log(basket, device_id)
     const { data } = await $host.post(`/basket/${basket}/`, {basket, device_id})
 }
 
@@ -29,7 +27,6 @@ export const updateQuantityDeviceInBasket = async (id, action) => {
         const { data } = await $host.patch(`/basket/${id}/update_quantity/`, { action });
         return data
     } catch (error) {
-        console.error('Error updating quantity:', error)
         throw error
     }
 };

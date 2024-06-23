@@ -88,10 +88,8 @@ const Accounting = () => {
     };
 
     const onRowEditComplete = (e) => {
-        console.log(e)
         let _products = [...products];
         let { newData, index } = e;
-        console.log(e)
         _products[index] = newData;
 
         setProducts(_products);

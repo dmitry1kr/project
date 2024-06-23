@@ -13,15 +13,11 @@ import person from '../../../assets/img/person.svg'
 import cart from '../../../assets/img/cart.svg'
 import phone from '../../../assets/img/phone.svg'
 import Auth from "../../../page/Auth";
-import user_img from '../../../assets/img/user.png'
 import { observer } from 'mobx-react-lite'
 import { Context } from "../../../index";
 import { useNavigate } from 'react-router-dom';
 import { BASKET_ROUT, DELIVERY_ORDER, MANGER_ROUT, PAY_ROUTE, PRODUCT_ROUT, SHOP_ROUT, USER_PROFILE } from "../../../utils/const";
 import { fetchTypes } from "../../../http/deviceAPI";
-import Register from "../../../page/Register";
-
-
 
 
 const NavBar = observer(() => {
@@ -32,8 +28,7 @@ const NavBar = observer(() => {
     const [types, setTypes] = useState()
     
     const {user} = useContext(Context)
-    const [profile, setProfile] = useState(user.userInfo)
-    console.log(user.userInfo.email, 'user')
+    
 
     const logOut = () => {
         user.setUser({})
@@ -55,7 +50,6 @@ const NavBar = observer(() => {
         fetchData()
     }, [])
 
-    console.log(types, 'types')
 
     const handleSelect = (id) => {
         navigate(PRODUCT_ROUT, { state: { selectedCategoryId: id } })
@@ -85,18 +79,23 @@ const NavBar = observer(() => {
                                     <NavDropdown.Item><Spinner animation={'border'}></Spinner></NavDropdown.Item> // Пока данные загружаются
                                 )}
                             </NavDropdown>
-                            <NavDropdown title="Заказы" id="navbarScrollingDropdown" style={{fontWeight: 600}}>
-                                <NavDropdown.Item href="#action3" className="d-flex align-items-center">
-                                    <i className="pi pi-truck"></i>
-                                    <Nav.Link href="#action1" style={{fontWeight: 600}} onClick={() => navigate(DELIVERY_ORDER)}>Доставка</Nav.Link>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action4" className="d-flex align-items-center">
-                                    <i className="pi pi-credit-card"></i>
-                                    <Nav.Link href="#action2" style={{fontWeight: 600}} onClick={() => navigate(PAY_ROUTE)}>Оплата</Nav.Link>
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            {/* <Nav.Link href="#action1" style={{fontWeight: 600}} onClick={() => navigate(DELIVERY_ORDER)}>Доставка</Nav.Link>
-                            <Nav.Link href="#action2" style={{fontWeight: 600}} onClick={() => navigate(PAY_ROUTE)}>Оплата</Nav.Link> */}
+                            {user.isAuth  
+                                ?
+                                <NavDropdown title="Заказы" id="navbarScrollingDropdown" style={{fontWeight: 600}}>
+                                    <NavDropdown.Item href="#action3" className="d-flex align-items-center">
+                                        <i className="pi pi-truck"></i>
+                                        <Nav.Link href="#" style={{fontWeight: 600}} onClick={() => navigate(DELIVERY_ORDER)}>Доставка</Nav.Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4" className="d-flex align-items-center">
+                                        <i className="pi pi-credit-card"></i>
+                                        <Nav.Link href="#" style={{fontWeight: 600}} onClick={() => navigate(PAY_ROUTE)}>Оплата</Nav.Link>
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                                :
+                                <div></div>
+                            }
+                            
+            
                             {user.isAuth && (user.userInfo.role === 'MODERATOR' || user.userInfo.role === 'ADMIN') 
                                 ?
                                 <span style={{cursor: 'pointer', fontWeight: 600}} onClick={() => navigate(MANGER_ROUT)}>Модератор {}</span>

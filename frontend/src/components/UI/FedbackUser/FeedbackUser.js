@@ -14,12 +14,10 @@ const FeedbackUser = (deviceId) => {
     const ds = useRef(null);
 
     const [comments, setComments] = useState()
-    const [userComment, setUserComment] = useState()
     const [loading, setLoading] = useState(true)
 
     const [showComment, setShowComment] = useState(false)
 
-    console.log(deviceId.deviceId, 'id')
 
     useEffect(() => {
         const fetchData = async () => {

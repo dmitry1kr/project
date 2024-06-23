@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, ListGroup, Image } from 'react-bootstrap'
+import { Form, ListGroup, Image } from 'react-bootstrap'
 import Profile from '../components/UI/ProfileItem/Profile'
 import HistoryOrder from '../components/UI/ProfileItem/HistoryOrder'
 import personal from '../assets/img/personal.svg'
@@ -9,11 +9,10 @@ import order_color from '../assets/img/order_color.svg'
 import style from './style/module/UserProfile.module.css'
 
 const UserProfile = () => {
-    const [valueInput, setValueInput] = useState(1)
     const [activeItem, setActiveItem] = useState(0)
 
     const visibleItem = (index) => {
-        setActiveItem(index); // Устанавливаем индекс активного элемента
+        setActiveItem(index); 
     }
 
 

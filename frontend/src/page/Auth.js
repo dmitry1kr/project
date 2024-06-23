@@ -51,7 +51,7 @@ const Auth = ({ visible, setVisible }) => {
             msgs.current.clear();
             setVisible(false);
         } catch (e) {
-            console.log(e, 'ошибка авторизации')
+
             showMessage('error', 'Ошибка', 'Неправильный пароль или логин');
         }
     };
@@ -60,12 +60,11 @@ const Auth = ({ visible, setVisible }) => {
         if (password === password2){
             try {
                 const response = await registration(email, loginUser, password, password2);
-                console.log(response);
+                
                 showMessage('success', 'Успешно', 'Вы зарегестрированы');
                 setRegistrationVisible(false)
                 msgs.current.clear();
             } catch (e) {
-                console.log('Ошибка при регистрации', e);
                 showMessage('error', 'Ошибка', '');
             }
         } else {

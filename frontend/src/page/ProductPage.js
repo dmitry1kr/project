@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import style from './style/module/ProductPage.module.css';
 import { Button, Col, Form, Image, ListGroup, Spinner, Accordion, Tooltip, OverlayTrigger } from 'react-bootstrap';
-import { Paginator } from 'primereact/paginator';
 import { Context } from '../index';
 import { fetchBrand, fetchDevice, fetchTypes } from '../http/deviceAPI';
 import Rating from '../components/UI/Rating/Rating';
@@ -147,7 +146,6 @@ const ProductPage = () => {
     };
 
     const productGrid = (product, index) => {
-        console.log(product.status_accounting.status)
         return (
             <Col md={6} className="mt-3 p-2" style={{ margin: '15px 0' }} key={index}>
                 <div className={style.product}>
@@ -222,11 +220,10 @@ const ProductPage = () => {
         addBasketDeivce(user_id, device_id)
             .then(() => {
                 cart.addToCart(device);
-                return getBasketUser(user_id); // Получаем обновленную корзину
+                return getBasketUser(user_id); 
             })
             .then(updatedBasket => {
-                setBasket(updatedBasket); // Обновляем состояние корзины
-                console.log('Basket updated:', updatedBasket);
+                setBasket(updatedBasket); 
             })
             .catch(error => {
                 console.error("Произошла ошибка при добавлении товара в корзину:", error);

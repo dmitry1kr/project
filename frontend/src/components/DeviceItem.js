@@ -1,21 +1,16 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Button, Col, Image } from 'react-bootstrap'
 import Rating from './UI/Rating/Rating'
 import style from './style/DeviceList.module.css'
 import { useNavigate } from 'react-router-dom'
 import { DEVICE_ROUT } from '../utils/const'
 import { observer } from 'mobx-react-lite'
-import { addBasketDeivce, deleteFromBasketDevice } from '../http/basketAPI'
+import { addBasketDeivce } from '../http/basketAPI'
 
 const DeviceItem = observer(({device, cart, user}) => {
 
     const navigate = useNavigate()
     
-    // const handleAddToCart = () => {
-        // cart.addToCart(device);
-        // console.log('Added to cart:', device);
-    // };
-    console.log(device, 'device', user.userInfo.email, cart)
 
     const handleAddToCart = (user_id, device_id) => {
         addBasketDeivce(user_id, device_id)
