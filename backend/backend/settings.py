@@ -198,3 +198,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTH_USER_MODEL ='api.User'
 mimetypes.add_type("image/svg+xml", ".svg", True)
+
+FORCE_SCRIPT_NAME = '/appDima'
